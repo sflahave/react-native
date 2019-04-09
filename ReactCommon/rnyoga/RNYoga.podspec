@@ -15,19 +15,19 @@ else
 end
 
 Pod::Spec.new do |spec|
-  spec.name = 'yoga'
+  spec.name = 'RNYoga'
   spec.version = "#{version}.React"
   spec.license =  { :type => 'MIT' }
   spec.homepage = 'https://yogalayout.com'
   spec.documentation_url = 'https://yogalayout.com/docs/'
 
-  spec.summary = 'Yoga is a cross-platform layout engine which implements Flexbox.'
-  spec.description = 'Yoga is a cross-platform layout engine enabling maximum collaboration within your team by implementing an API many designers are familiar with, and opening it up to developers across different platforms.'
+  spec.summary = 'RNYoga is an offshoot from Yoga, which is a cross-platform layout engine which implements Flexbox.'
+  spec.description = 'RNYoga is a React Native specific version of the Yoga library. Yoga is a cross-platform layout engine enabling maximum collaboration within your team by implementing an API many designers are familiar with, and opening it up to developers across different platforms.'
 
   spec.authors = 'Facebook'
   spec.source = source
 
-  spec.module_name = 'yoga'
+  spec.module_name = 'RNYoga'
   spec.requires_arc = false
   spec.compiler_flags = [
       '-fno-omit-frame-pointer',
@@ -44,10 +44,10 @@ Pod::Spec.new do |spec|
   # Set this environment variable when *not* using the `:path` option to install the pod.
   # E.g. when publishing this spec to a spec repo.
   source_files = 'yoga/**/*.{cpp,h}'
-  source_files = File.join('ReactCommon/yoga', source_files) if ENV['INSTALL_YOGA_WITHOUT_PATH_OPTION']
+  source_files = File.join('ReactCommon/rnyoga', source_files) if ENV['INSTALL_YOGA_WITHOUT_PATH_OPTION']
   spec.source_files = source_files
 
   header_files = 'yoga/{Yoga,YGEnums,YGMacros,YGValue,YGStyle,CompactValue,YGFloatOptional,Yoga-internal,YGNode,YGConfig,YGLayout,YGMarker}.h'
-  header_files = File.join('ReactCommon/yoga', header_files) if ENV['INSTALL_YOGA_WITHOUT_PATH_OPTION']
+  header_files = File.join('ReactCommon/rnyoga', header_files) if ENV['INSTALL_YOGA_WITHOUT_PATH_OPTION']
   spec.public_header_files = header_files
 end
